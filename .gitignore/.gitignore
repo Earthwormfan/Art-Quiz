@@ -1,0 +1,62 @@
+/* This is a quiz for artists
+Are you an expert or a doofus?*/
+
+//Begins with no answers correct
+var correct = 0;
+
+//ask questions
+var primaries1 = prompt('Are the primary colors RYB or CMY?');
+if ( primaries1.toUpperCase() === 'CMY' ) {
+  alert('Correct!')
+  correct += 1;
+} else  {
+  alert('False. The correct answer is CMY.')
+}       
+
+var digital1 = prompt('Is digital art created through additive or subtractive color?');
+if ( digital1.toUpperCase() === 'ADDITIVE' ) {
+  alert('Correct!')
+  correct += 1;
+} else  {
+  alert('False. The correct answer is additive.')
+}
+
+var pigment1 = prompt('Is traditional art created through additive or subtractive color?');
+if ( pigment1.toUpperCase() === 'SUBTRACTIVE' ) {
+  alert('Correct!')
+  correct += 1;
+} else  {
+  alert('False. The correct answer is subtractive.')
+}
+
+var magenta1 = prompt('What primary color can be seen in subtractive color but not additive color?');
+if ( magenta1.toUpperCase() === 'MAGENTA' ) {
+   alert('Correct!')
+   correct += 1;
+} else  {
+  alert('False. The correct answer is Magenta.')
+}
+
+var naked1 = prompt('Should you run through the street naked screaming, "MY ASS WILL EXPERIENCE ALL OF THE WAVELENGTHS!!!"?')
+if ( naked1.toUpperCase() === 'YES' )  {
+   alert('Correct!')
+   correct += 1;
+} else if (naked1.toUpperCase() === 'NO') {
+  alert('Get with the program n00b.')
+} else  {
+  alert('Pay ATTENTION.')
+}
+
+//output results
+document.write("<p>You got " + correct + " out of 5 questions correct!</P>");
+
+//output rank
+if (correct === 5 ) {
+  document.write("<p><strong>You are super into colors, yo.</p></strong>");
+} else if (correct >=3 ) {
+  document.write("<p><strong>Your color knowledge is aight.</p></strong>");
+} else if (correct >=1 ) {
+  document.write("<p><strong>Go back to 50 shades of gray, dawg.</p></strong>");
+} else {
+  document.write("<p><strong>Dude... just try.</p></strong>");
+}
